@@ -1,91 +1,185 @@
 <!DOCTYPE html>
-<html lang="english">
-    <head>
-        <meta charset="UTF-8">
-        <title>Mahi's Portfolio</title>
-        <style>
-            *{
-                background-color: rgb(97, 119, 68);
-                color: whitesmoke;
-            }
-            h1,h2,p{
-            text-align: center;
-            }
-            .container{
-                display:flex;
-                flex-wrap: wrap;
-                padding:10px;
-                margin: 10px;
-                align-items: center;
-                justify-content:center;
-                gap: 20px;
-            }
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Mahi's Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-            img{
-                border-radius:5%;
-            }
+    body {
+      background-color: #1E1F26;
+      color: #EEEEEE;
+    }
 
-        </style>
-    </head>
+    header {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #2C2E3A;
+    }
 
-    <body>
-        <header>
-            <h1>Mahi's portfolio</h1>
-            <h2>I'm a fresher web developer</h2>
-            <nav>
-                <ul>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#me">About Me</a></li>
-                </ul>
-            </nav>
-        </header>
-        <hr/>
-        <main id="projects">
-            <h2>HTML PROJECTS:</h2>
-            <p>Click on the images to get to different project pages!</p>
-            <div class="container">
-                <a href="./public/tindog.html">
-                    <img src="./images/TinDog - Google Chrome 17-08-2024 17_34_53.png" height="200" width="200" alt="TINDER FOR DOGS WEBSITE PREVIEW">
-                </a>
-                <a href="./public/animalopedia.html">
-                    <img src="./images/ANIMALOPEDIA.com - Google Chrome 13-08-2024 08_25_44.png" height="200" width="200" alt="ANIMALOPEDIA PROJECT PREVIEW"
-                </a>
-                <a href="./public/burgerorder.html">
-                    <img src="./images/Screenshot 2024-07-25 184540.png" height="200" width="200" alt="BURGER PROJECT PREVIEW"/>
-                </a>
-                <a href="./public/packinglist.html">
-                    <img src="images/Screenshot 2024-07-22 201322.png" height="200" width="200" alt="COMPANY PACKING LIST PREVIEW"/>
-                </a>
-                <a href="./public/bear.html">
-                    <img src="images/Screenshot 2024-07-21 011119.png" height="200" width="200" alt="BEAR INFORMATION SITE PREVIEW"/>
-                </a>
-                <a href="./public/Yoga_day_invite.html">
-                    <img src="./images/Yoga_day_invite.html - Google Chrome 10-06-2024 17_27_20.png" height="200" width="200" alt="YOGA DAY INVITE PREVIEW"/>
-                </a>
-                <a href="./public/birthday invite.html">
-                    <img src="./images/birthday invite.html - Google Chrome 10-06-2024 17_26_55.png" height="200" width="200" alt="BIRTHDAY INVITE PREVIEW"/>
-                </a>
-                <a href="./public/gaming_websites.html">
-                    <img src="./images/gaming_websites.html - Google Chrome 10-06-2024 17_25_56.png" height="200" width="200" alt="GAMING WEBSITE PREVIEW"/>
-                </a>
-                <a href="./public/searching_websites.html">
-                    <img src="./images/searching_websites.html - Google Chrome 10-06-2024 17_26_15.png" height="200" width="200" alt="SEARCHING WEBSITE PREVIEW"/>
-                </a>
-                <a href="./public/Recipe_book.html">
-                    <img src="./images/movie_ranker_project.html - Google Chrome 10-06-2024 17_25_30.png" height="200" width="200" alt="BASIC RECIPE BOOK WEBSITE PREVIEW"/>
-                </a>
-                <a href="./public/movie_ranker_project.html">
-                    <img src="./images/movie_ranker_project.html - Google Chrome 10-06-2024 17_24_59.png" height="200" width="200" alt="BASIC MOVIE RANKER PROJECT PREVIEW"/>
-                </a>
-                <a href="./public/basic_notes_project.html">
-                    <img src="./images/basic_notes_project.html - Google Chrome 10-06-2024 17_23_57.png" height="200" width="200" alt="BASIC NOTES PROJECT PREVIEW"/>
-                </a>
-            </div>
-        </main>
-        <hr/>
-        <footer id="me">
-            <a href="./public/about.html">About Me</a>
-            <a href="./public/contact.html">Contact Me</a>
-        </footer>
-    </body>
+    h1 {
+      font-size: 3rem;
+      color: #FFD369;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 10px;
+      color: #EEEEEE;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #FFD369;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffffff;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background-color: #FFD369;
+      margin: 30px 0;
+    }
+
+    main {
+      text-align: center;
+      padding: 20px;
+    }
+
+    main p {
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container a {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .container a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(255, 211, 105, 0.3);
+    }
+
+    img {
+      height: 200px;
+      width: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #2C2E3A;
+      margin-top: 30px;
+    }
+
+    footer a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #FFD369;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mahi's Portfolio</h1>
+    <h2>I'm a Fresher Web Developer</h2>
+    <nav>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#me">About Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr/>
+
+  <main id="projects">
+    <h2>HTML PROJECTS:</h2>
+    <p>Click on the images to get to different project pages!</p>
+    <div class="container">
+      <a href="./public/tindog.html">
+        <img src="./images/TinDog - Google Chrome 17-08-2024 17_34_53.png" alt="TINDER FOR DOGS WEBSITE PREVIEW">
+      </a>
+      <a href="./public/animalopedia.html">
+        <img src="./images/ANIMALOPEDIA.com - Google Chrome 13-08-2024 08_25_44.png" alt="ANIMALOPEDIA PROJECT PREVIEW">
+      </a>
+      <a href="./public/burgerorder.html">
+        <img src="./images/Screenshot 2024-07-25 184540.png" alt="BURGER PROJECT PREVIEW">
+      </a>
+      <a href="./public/packinglist.html">
+        <img src="images/Screenshot 2024-07-22 201322.png" alt="COMPANY PACKING LIST PREVIEW">
+      </a>
+      <a href="./public/bear.html">
+        <img src="images/Screenshot 2024-07-21 011119.png" alt="BEAR INFORMATION SITE PREVIEW">
+      </a>
+      <a href="./public/Yoga_day_invite.html">
+        <img src="./images/Yoga_day_invite.html - Google Chrome 10-06-2024 17_27_20.png" alt="YOGA DAY INVITE PREVIEW">
+      </a>
+      <a href="./public/birthday invite.html">
+        <img src="./images/birthday invite.html - Google Chrome 10-06-2024 17_26_55.png" alt="BIRTHDAY INVITE PREVIEW">
+      </a>
+      <a href="./public/gaming_websites.html">
+        <img src="./images/gaming_websites.html - Google Chrome 10-06-2024 17_25_56.png" alt="GAMING WEBSITE PREVIEW">
+      </a>
+      <a href="./public/searching_websites.html">
+        <img src="./images/searching_websites.html - Google Chrome 10-06-2024 17_26_15.png" alt="SEARCHING WEBSITE PREVIEW">
+      </a>
+      <a href="./public/Recipe_book.html">
+        <img src="./images/movie_ranker_project.html - Google Chrome 10-06-2024 17_25_30.png" alt="BASIC RECIPE BOOK WEBSITE PREVIEW">
+      </a>
+      <a href="./public/movie_ranker_project.html">
+        <img src="./images/movie_ranker_project.html - Google Chrome 10-06-2024 17_24_59.png" alt="MOVIE RANKER PROJECT PREVIEW">
+      </a>
+      <a href="./public/basic_notes_project.html">
+        <img src="./images/basic_notes_project.html - Google Chrome 10-06-2024 17_23_57.png" alt="NOTES PROJECT PREVIEW">
+      </a>
+    </div>
+  </main>
+
+  <hr/>
+
+  <footer id="me">
+    <a href="./public/about.html">About Me</a>
+    <a href="./public/contact.html">Contact Me</a>
+  </footer>
+</body>
 </html>
